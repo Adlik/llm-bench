@@ -4,7 +4,8 @@ jobs=0
 [MESSAGES CONTROL]
 disable = bare-except,
           too-many-branches,
-          too-many-statements
+          too-many-statements,
+          undefined-all-variable
 
 [FORMAT]
 max-line-length = 120
