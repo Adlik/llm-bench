@@ -1,7 +1,17 @@
 {
     "default": true,
     "line-length": {
-        "line_length": 120,
+        "line_length": 200,
         "tables": false
+    },
+    "MD013": {
+        "line_length": 200
+    },
+    "MD033": {
+        "allowed_elements": [
+            "nobr",
+            "sup",
+            "a"
+        ]
     }
 }
