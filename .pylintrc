@@ -1,18 +1,31 @@
 [MASTER]
-jobs=0
+jobs = 0
+ignore = proto
 
 [MESSAGES CONTROL]
-disable = bare-except,
-          too-many-branches,
-          too-many-statements
+
+disable=import-error,
+        invalid-name,
+        missing-function-docstring,
+        no-self-use,
+        too-many-locals,
+        too-few-public-methods,
+        attribute-defined-outside-init
 
 [FORMAT]
-max-line-length = 120
+
+max-line-length=120
+disable=logging-fstring-interpolation
+
+[SIMILARITIES]
+
+ignore-imports=yes
+min-similarity-lines=6
 
 [BASIC]
-good-names = i,
-             j,
-             k,
-             _,
-             x,
-             y
+
+function-rgx=(([a-z][a-z0-9_]{2,80})|(_[a-z0-9_]*))$
+method-rgx=(([a-z][a-z0-9_]{2,80})|(_[a-z0-9_]*))$
+
+[TYPECHECK]
+generated-members=torch.*
